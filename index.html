@@ -91,8 +91,8 @@
                 alt="Compétences logo"
                 class="icon"
               />
-              <h3>Associations</h3>
-              <p>2 années <br />Conseil Local de la jeunesse</p>
+              <h3>BUTMMI</h3>
+              <p>2 années <br />BUT Métier du Multimédia et de l'Informatique</p>
             </div>
             <div class="details-container">
               <img
@@ -360,17 +360,23 @@
     </section>
     <section class="contact section" id="contact">
       <h2 class="section-title">Contact</h2>
-
+  
       <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-              <input type="text" placeholder="Name" class="contact__input">
-              <input type="mail" placeholder="Email" class="contact__input">
-              <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-              <input type="button" value="Enviar" class="contact__button button">
+          <form action="sendmail.php" method="POST" class="contact__form">
+              <input type="text" name="name" placeholder="Name" class="contact__input" required>
+              <input type="email" name="email" placeholder="Email" class="contact__input" required>
+              <textarea name="message" cols="0" rows="10" class="contact__input" required></textarea>
+              <input type="submit" value="Enviar" class="contact__button button">
           </form>
       </div>
   </section>
-    <footer>
+  
+    
+  
+  
+  
+  
+  <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
@@ -383,6 +389,7 @@
       </nav>
       <p>Copyright &#169; 2024 Wassila Hamed. All rights reserved</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
