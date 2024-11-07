@@ -414,6 +414,14 @@ article .icon {
   cursor: pointer;
   margin-left: auto;
 }
+
+.contact__form {
+  width: 360px;
+  padding-top: 2rem;
+}
+.contact__container {
+  justify-items: center;
+}
 /* FOOTER SECTION */
 
 footer {
