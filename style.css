@@ -231,7 +231,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: #536f51 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -241,12 +241,12 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background:#a3be8f;
+  color: #e6f1e4;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: #536f51;
 }
 
 .btn-color-2 {
@@ -254,7 +254,7 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: #a3be8f 0.1rem solid;
 }
 
 .btn-container {
@@ -265,7 +265,7 @@ section {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: #fff;
+  color: #e6ba61;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
@@ -448,7 +448,7 @@ article .icon {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: rgb(53, 53, 53);
+  background-color: #536f51;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
