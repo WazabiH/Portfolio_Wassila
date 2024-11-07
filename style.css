@@ -367,32 +367,49 @@ article .icon {
   cursor: default;
 }
 
+
 /* PROJECTS SECTION */
 
-#projects {
+/* PROJECTS SECTION */
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.work__img {
+  box-shadow: 0px 4px 25px rgba(13, 20, 11, 0.916);
+  border-radius: 0.5rem;
+  overflow: hidden;
   position: relative;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.work__img img {
+  transition: 1s;
+  width: 100%;
+  height: auto; /* Assure que l'image garde ses proportions */
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+.work__img img:hover {
+  transform: scale(1.1);
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+.work__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(110, 202, 30, 0.6); /* Fond semi-transparent */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: none; /* Par défaut, caché */
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+.work__img:hover .work__description {
+  display: block; /* Affiche la description lors du survol */
 }
+
 
 
 /* ===== CONTACT =====*/
