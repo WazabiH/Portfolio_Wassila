@@ -399,26 +399,20 @@ article .icon {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-  color: white;
+  background-color: #a3be8f; /* Fond semi-transparent */
+  color: #ff0000; /* Nouveau texte en rouge */
   padding: 1rem;
   text-align: center;
   display: none; /* Masqué par défaut */
 }
 
+
 .work__img:hover .work__description {
   display: block; /* Affiche la description au survol */
 }
 
-/* Ajoute un padding autour de la section des projets */
-.work.section {
-  margin-top: 50px; /* Si tu veux toujours une marge en haut */
-  padding: 20px;    /* Ajuste cette valeur pour l'espacement souhaité */
-}
-
-/* Si tu veux spécifiquement un padding autour des images dans les projets */
-.work.section img {
-  padding: 10px;    /* Ajuste cette valeur pour l'espacement autour des images */
+.text_color {
+  color: #536f51 ;
 }
 
 /* ===== CONTACT =====*/
