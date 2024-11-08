@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./media/photo_profil.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Portfolio-Wassila Hamed</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Wassila Hamed</div>
+      <div class="logo">PORTFOLIO</div>
       <div>
-        <ul class="nav-links">
+        <ul class="nav-links ">
           <li><a href="#about">A propos</a></li>
           <li><a href="#experience">Compétences</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -30,10 +31,12 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <ul>
+            <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -71,184 +74,138 @@
           />
         </div>
       </div>
-    </section>a
+    </section>
 
+<!--===== A PROPOS =====--> 
     <section id="about">
       <p class="section__text__p1">En savoir plus</p>
       <h1 class="title">A propos de moi</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./media/chat.jpg"
-            alt="chat photo"
-            class="about-pic"
-          />
+          <img src="./media/chat.jpg" alt="chat photo" class="about-pic" />
         </div>
-          <div class="text-container">
-            <h3> JE SUIS WASSILA</h3>
-            <p>
-                Dans ma vie, j'ai toujours eu une grande curiosité et j'aime découvrir de nouvelles choses. Que ce soit le dessin, la peinture, le montage, 
-                la photographie ou même le développement et la programmation, je trouve quelque chose d'intéressant dans chacun de ces domaines. 
-                Même si je suis débutant dans certains de ces domaines, je travaille dur pour compléter mes compétences grâce à ma formation actuelle en 
-                première année de BUT MMI (Bachelor des Métiers du Multimédia et de l'Internet). 
-                Mon objectif est de continuer mes études dans le parcours développement, où j'espère pouvoir réaliser mon projet ultime. En attendant, vous 
-                pouvez découvrir ce que je fais actuellement !
-            </p>
-          </div>
+        <div class="text-container">
+          <h3>JE SUIS WASSILA</h3>
+          <p>
+            Dans ma vie, j'ai toujours eu une grande curiosité et j'aime découvrir
+            de nouvelles choses. Que ce soit le dessin, la peinture, le montage, la
+            photographie ou même le développement et la programmation, je trouve
+            quelque chose d'intéressant dans chacun de ces domaines. Même si je suis
+            débutant dans certains de ces domaines, je travaille dur pour compléter
+            mes compétences grâce à ma formation actuelle en première année de BUT
+            MMI (Bachelor des Métiers du Multimédia et de l'Internet). Mon objectif
+            est de continuer mes études dans le parcours développement, où j'espère
+            pouvoir réaliser mon projet ultime. En attendant, vous pouvez découvrir
+            ce que je fais actuellement !
+          </p>
         </div>
       </div>
-      <img
-        src="./media/flèche.jpg"
-        alt="flèche icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
+
+<!--===== COMPETENCES =====-->  
+
     <section id="experience">
-      <p class="section__text__p1">Explorez mes compétenes</p>
+      <p class="section__text__p1">Explorez mes compétences</p>
       <h1 class="title">Compétences</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          <!-- Frontend Development Column -->
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>HTML</h3>
-                  <p>Experimenter</p>
+                  <p>Expérimenté</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>CSS</h3>
-                  <p>Experimenter</p>
+                  <p>Expérimenté</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>débutant</p>
+                  <p>Débutant</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
-                  <h3>Illutrator</h3>
-                  <p>Intermediaire</p>
+                  <h3>Illustrator</h3>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
-                  <h3>Indesign</h3>
-                  <p>Intermediaire</p>
+                  <h3>Indisgn</h3>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>Photoshop</h3>
-                  <p>Intermediaire</p>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
             </div>
           </div>
+    
+          <!-- Backend Development Column -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>Git</h3>
-                  <p>Intermediaire</p>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>PHP</h3>
-                  <p>Intermediate</p>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
-                  <h3>My SQL</h3>
-                  <p>Intermediaire</p>
+                  <h3>MySQL</h3>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./media/valider.jpg"
-                  alt="Compétences icon"
-                  class="icon"
-                />
+                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
                 <div>
                   <h3>WordPress</h3>
-                  <p>intermédiaire</p>
+                  <p>Intermédiaire</p>
                 </div>
               </article>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./media/flèche.jpg"
-        alt="flèches icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <!--===== WORK =====-->
-<!--===== WORK =====-->
+
+<!--===== PROJETS =====-->
 <section class="work section " id="projects">
   <p class="section__text__p1">Mes projets réçent</p>
   <h1 class="title">Projets</h1>
 
   <div class="work__container bd-grid">
       <a href="lien-vers-ton-projet-1.html" class="work__img">
-          <img src="media/associations.jpg" alt="">
+          <img src="media/wordpress.png" alt="wordpress site">
           <div class="work__description ">
-              <p class="text_color" >Un projet sur les associations, découvrant leur impact.</p>
+              <p class="text_color" >Création d'un site sur wordpress</p>
           </div>
       </a>
       <a href="lien-vers-ton-projet-2.html" class="work__img">
@@ -269,8 +226,8 @@
               <p class="text_color">Site web conernant une data donnée</p>
           </div>
       </a>
-      <a href="lien-vers-ton-projet-4.html" class="work__img">
-        <img src="media/livret.png" alt="">
+      <a href="https://drive.google.com/file/d/125xGp_pKnHqG3HBIhGQEJc9QvT_V1ljs/view?usp=sharing" class="work__img">
+        <img src="media/livret-exposition.png" alt="Livret d'exposition">
         <div class="work__description">
             <p class="text_color">Livret d'exposition</p>
         </div>
@@ -295,16 +252,21 @@
       </div>
     </a>
     
+    <a href="https://drive.google.com/file/d/1ClKNtYzIVfGrMtY08xngdBG_aYXw9dkX/view?usp=sharing" class="work__img">
+      <img src="media/chartegraphique.png" alt="Portfolio">
+      <div class="work__description">
+          <p class="text_color">Charte Graphique de Mon Portfolio</p>
+      </div>
+    </a>
       <!-- Ajoute ici les autres projets -->
   </div>
 </section>
 
-    
     <!--===== CONTACT =====-->
     <section class="contact section" id="contact">
-      <p class="section__text__p1">Prendre contact</p>
-      <h2 class="section-title">Contact</h2>
-  
+      <p class="section__text__p1">Contactez-moi</p>
+      <h1 class="title">Contact</h1>
+
       <div class="contact__container bd-grid">
           <form action="sendmail.php" method="POST" class="contact__form">
               <input type="text" name="name" placeholder="Name" class="contact__input" required>
@@ -313,22 +275,18 @@
               <input type="submit" value="Envoyez" class="contact__button button">
           </form>
       </div>
-  </section>
+    </section>
   
-    
-  
-  
-  
-  
+  <!--===== FOOTER =====-->
   <footer>
       <nav>
         <div class="nav-links-container">
-          <ul class="nav-links">
+          <div class="nav-links">
             <li><a href="#about">A propos</a></li>
             <li><a href="#experience">Compétences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
+          </div>
         </div>
       </nav>
       <p>Copyright &#169; 2024 Wassila Hamed. All rights reserved</p>
