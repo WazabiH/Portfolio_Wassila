@@ -204,6 +204,12 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  object-fit: cover; /* Ajuste l'image sans déformation */
+  transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+.section__pic-container:hover img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .section__text {
