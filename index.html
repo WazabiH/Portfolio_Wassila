@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Swiper.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
+    <div id="loader">
+        <img src="images/c93fe6700892afe9dfd8dae758aac973.gif" alt="Animation de chargement" id="loader-img">
+    </div>
+    
+    
     <nav class="navbar">
         <ul>
             <li><a href="#accueil">Accueil</a></li>
@@ -38,9 +47,9 @@
     </header>
     
 
-
     <section id="projets">
         <h2>Mes Projets</h2>
+        
         <div class="projet-nav">
             <ul>
                 <li><a href="#" data-filter="all">Tous les projets</a></li>
@@ -49,22 +58,123 @@
                 <li><a href="#" data-filter="crea-projets">Projets Création</a></li>
             </ul>
         </div>
-        <div id="dev-projets" class="grid">
-            <div class="card">Projet Développement 1</div>
-            <div class="card">Projet Développement 2</div>
-            <div class="card">Projet Développement 3</div>
+
+
+        
+    
+        <!-- SECTION PROJETS DÉVELOPPEMENT -->
+
+        <div id="dev-projets" class="grid active">
+            <div class="card">
+                <img src="images/study-smart.jpg" alt="Study Smart">
+                <h3>Study Smart - Maquette</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    UI design d’une application mobile "Study Smart" dédié à guider les étudiants...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+    
+            <div class="card">
+                <img src="images/bakanime.jpg" alt="Bakanime">
+                <h3>Application Mobile - Bakanime</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Bakanime : une application pour les fans d’anime afin d’explorer et suivre leurs séries...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="images/bakanime.jpg" alt="Bakanime">
+                <h3>Application Mobile - Bakanime</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Bakanime : une application pour les fans d’anime afin d’explorer et suivre leurs séries...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
         </div>
+    
+        <!-- SECTION PROJETS COMMUNICATION -->
         <div id="com-projets" class="grid">
-            <div class="card">Projet Communication 1</div>
-            <div class="card">Projet Communication 2</div>
-            <div class="card">Projet Communication 3</div>
+            <div class="card">
+                <img src="images/com-projet1.jpg" alt="Projet Communication 1">
+                <h3>Projet Communication 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Création de supports visuels pour une campagne marketing...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="images/com-projet1.jpg" alt="Projet Communication 1">
+                <h3>Projet Communication 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Création de supports visuels pour une campagne marketing...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="images/com-projet1.jpg" alt="Projet Communication 1">
+                <h3>Projet Communication 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Création de supports visuels pour une campagne marketing...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
         </div>
+    
+        <!-- SECTION PROJETS CRÉATION -->
         <div id="crea-projets" class="grid">
-            <div class="card">Projet Création 1</div>
-            <div class="card">Projet Création 2</div>
-            <div class="card">Projet Création 3</div>
+            <div class="card">
+                <img src="images/crea-projet1.jpg" alt="Projet Création 1">
+                <h3>Projet Création 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Réalisation d’une affiche interactive pour un événement culturel...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="images/crea-projet1.jpg" alt="Projet Création 1">
+                <h3>Projet Création 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Réalisation d’une affiche interactive pour un événement culturel...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="images/crea-projet1.jpg" alt="Projet Création 1">
+                <h3>Projet Création 1</h3>
+                <p><a href="#">Voir le projet</a></p>
+                <p><strong>Description</strong></p>
+                <p class="card-description">
+                    Réalisation d’une affiche interactive pour un événement culturel...
+                </p>
+                <a href="#" class="more-link">En savoir plus</a>
+            </div>
         </div>
+</div>
+
+    
     </section>
+    
     
     
     
@@ -140,6 +250,9 @@
         </div>
     </section>
     
+    <div class="full-width-image">
+        <img src="images/banniere.png" alt="Description de l'image">
+    </div>
     
 
 
@@ -174,21 +287,32 @@
         </div>
     </section>
     
-    
     <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form>
-            <input type="text" placeholder="Votre nom" required>
-            <input type="email" placeholder="Votre email" required>
-            <textarea placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/votreprofil" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/votreprofil" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/votreprofil" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="images/contact.jpg" alt="Contact Image">
+            </div>
+            <div class="contact-form">
+                <h2>Contactez-moi</h2>
+                <form>
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre email" required>
+                    <textarea placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </section>
+
+    <div class="full-width-image">
+        <img src="images/contact.png" alt="Description de l'image">
+    </div>
+    
 
     <footer class="footer">
         <p>&copy; 2025 Wassila Hamed - Tous droits réservés</p>

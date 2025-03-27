@@ -1,7 +1,7 @@
 :root {
     --emerald: #053b1c;
     --dark: #1e1e1e;
-    --light: #f5f5f5;
+    --light: #e7e6d3;
 }
 html {
     scroll-behavior: smooth;
@@ -15,6 +15,37 @@ body {
     color: var(--dark);
     scroll-behavior: smooth;
 }
+
+/* Loader en plein écran */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black; /* Change si besoin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* GIF en plein écran */
+#loader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste le GIF pour qu'il remplisse l'écran */
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+/* Disparition progressive */
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
 
 .navbar {
     position: fixed;
@@ -95,8 +126,7 @@ section {
     text-align: center;
 }
 
-/*PROJETS */ 
-
+/* PROJETS */
 .projet-nav {
     margin-bottom: 30px;
 }
@@ -120,47 +150,140 @@ section {
 }
 
 .grid {
-    display: none; /* Cacher toutes les sections par défaut */
+    display: none;
     justify-content: center;
-    gap: 40px; /* Augmente l'espacement entre les cartes */
+    gap: 40px;
     flex-wrap: wrap;
-    margin-top: 20px; /* Ajoute un espace au-dessus des groupes de projets */
+    margin-top: 20px;
 }
 
 .grid.active {
-    display: flex; /* Afficher uniquement celle qui est active */
+    display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
-    width: 250px;
-    height: 180px;
-    background: var(--emerald);
-    color: white;
+/* CAROUSEL */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* CARTES PROJETS */
+.card {
+    min-width: 280px;
+    max-width: 320px;
+    background: white;
+    color: black;
     border-radius: 10px;
-    transition: 0.3s;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour le style */
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#projets {
-    padding-bottom: 100px; /* Ajoute un espace en bas pour l'aération */
-}
-
-
-.card:hover {
+/* Effet de mise en avant du projet au centre */
+.card.center {
     transform: scale(1.1);
-    background: var(--dark);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE DU PROJET */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TITRE DU PROJET */
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+/* LIENS */
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--emerald);
+}
+
+.card a:hover {
+    color: var(--dark);
+}
+
+/* DESCRIPTION */
+.card-description {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* LIEN "EN SAVOIR PLUS" */
+.card .more-link {
+    font-weight: bold;
+    color: var(--emerald);
+    display: block;
+    margin-top: 10px;
+}
+
+.card .more-link:hover {
+    color: var(--dark);
+}
+
+/* BOUTONS DE NAVIGATION */
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
 }
 
 
 
-/* COMPETENCES*/ 
 /* COMPETENCES */
 #competences {
     text-align: center;
@@ -303,23 +426,7 @@ h2 {
     left: 58%;
 }
 
-/* Cercles (indicateurs) */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 100%;
-    width: 16px;
-    height: 16px;
-    background: white;
-    border-radius: 50%; /* Cercle au lieu d'un losange */
-    border: 3px solid #053b1c;
-    transform: translateX(-50%);
-}
 
-.timeline-item:nth-child(even)::before {
-    left: -8%;
-}
 
 /* Années */
 .year {
@@ -340,80 +447,84 @@ h2 {
     transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .timeline::after {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 90%;
-        left: 0 !important;
-        text-align: left;
-        padding-left: 40px;
-    }
-
-    .timeline-item::before {
-        left: 10px !important;
-    }
-}
 
 
 
 /* FORMULAIRE DE CONTACT*/ 
-/* SECTION CONTACT */
+
 #contact {
-    background-color: #f8f9fa;
+    background-color: #e7e6d3;
     padding: 50px 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    gap: 40px;
+}
+
+.contact-image {
+    flex: 1;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
 }
 
 #contact h2 {
     color: #053b1c;
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 input, textarea {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     border: 1px solid #ced4da;
     border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: #198754;
-    outline: none;
+    font-size: 14px;
 }
 
 textarea {
-    height: 150px;
+    height: 100px;
 }
 
 button {
     background-color: #198754;
     color: white;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -421,19 +532,21 @@ button:hover {
 }
 
 .social-links {
-    margin-top: 30px;
+    margin-top: 20px;
+    text-align: center;
 }
 
-.social-links a {
-    color: #053b1c;
-    font-size: 30px;
-    margin: 0 15px;
-    transition: color 0.3s ease;
+.full-width-image {
+    width: 100vw; /* Prend toute la largeur de l'écran */
+    overflow: hidden;
 }
 
-.social-links a:hover {
-    color: #198754;
+.full-width-image img {
+    width: 100%;
+    height: auto; /* Garde le ratio de l'image */
+    display: block;
 }
+
 
 
 /*FOOTER*/

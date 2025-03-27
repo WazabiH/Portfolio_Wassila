@@ -67,3 +67,35 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => section.classList.add("active"));
 });
 
+const carousel = document.querySelector('.carousel');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+let scrollAmount = 0;
+
+nextBtn.addEventListener('click', () => {
+    scrollAmount += 320; // Ajuste en fonction de la taille des cartes
+    carousel.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+    scrollAmount -= 320;
+    if (scrollAmount < 0) scrollAmount = 0;
+    carousel.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+
+
+
+    window.addEventListener("load", function () {
+        let loader = document.getElementById("loader");
+
+        // Attendre la fin du GIF (ajuste le temps selon la durée de ton GIF)
+        setTimeout(() => {
+            loader.classList.add("fade-out");
+        }, 3000); // Change 3000 par la durée réelle du GIF en millisecondes
+    });
+
+
+
+
+
