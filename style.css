@@ -1,6 +1,6 @@
 :root {
-    --emerald: #053b1c;
-    --dark: #1e1e1e;
+    --emerald: #344c36;
+    --dark: #7a3600;
     --light: #e7e6d3;
 }
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'League Spartan', sans-serif;
     margin: 0;
     padding: 0;
     background: var(--light);
@@ -16,35 +16,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Loader en plein écran */
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: black; /* Change si besoin */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+h1 {
+    font-weight: 500;
+    font-size: 24px;
 }
 
-/* GIF en plein écran */
-#loader-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajuste le GIF pour qu'il remplisse l'écran */
-    opacity: 1;
-    transition: opacity 1s ease-out;
-}
-
-/* Disparition progressive */
-.fade-out {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-out, visibility 1s ease-out;
-}
 
 
 .navbar {
@@ -52,30 +28,37 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background: #053b1c;
-    padding: 15px 0;
+    padding: 15px 20px; /* Ajoute du padding horizontal */
     text-align: center;
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Centre la nav */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Aligné à droite */
     gap: 20px;
+    max-width: 1200px; /* Pour éviter que tout soit collé sur les bords */
+}
+
+a {
+    font-size: 20px; /* Taille en pixels */
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    
+    font-weight: 500;
     transition: 0.3s;
+    padding: 10px 15px; /* Espacement entre les liens */
 }
 
 .navbar a:hover {
     color: var(--dark);
 }
+
 
 header {
     height: 100vh;
@@ -127,6 +110,10 @@ section {
 }
 
 /* PROJETS */
+
+#projets {
+    background-color:var(--emerald);
+}
 .projet-nav {
     margin-bottom: 30px;
 }
@@ -141,7 +128,7 @@ section {
 
 .projet-nav a {
     text-decoration: none;
-    color: var(--emerald);
+    color: var(--light);
     transition: 0.3s;
 }
 
@@ -161,33 +148,6 @@ section {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-/* CAROUSEL */
-.carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
 }
 
 /* CARTES PROJETS */
@@ -288,12 +248,12 @@ button {
 #competences {
     text-align: center;
     padding: 50px 0;
-    background-color: #053b1c;
+    background-color: var(--light);
 }
 
 h2 {
-    color: white;
-    font-size: 24px;
+    color: var(--emerald);
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -309,7 +269,7 @@ h2 {
 }
 
 .competence-column h3 {
-    color: white;
+    color: var(--emerald);
     font-size: 22px;
     margin-bottom: 20px;
 }
@@ -324,7 +284,7 @@ h2 {
 .skill {
     display: flex;
     align-items: center;
-    background: white;
+    background: var(--dark);
     padding: 15px 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -354,7 +314,7 @@ h2 {
 
 /* Section principale */
 #a-propos {
-    background-color: #053b1c; /* Fond vert foncé */
+    background-color: var(--emerald); /* Fond vert foncé */
     color: white;
     text-align: center;
     padding: 60px 20px;
@@ -450,92 +410,6 @@ h2 {
 
 
 
-/* FORMULAIRE DE CONTACT*/ 
-
-#contact {
-    background-color: #e7e6d3;
-    padding: 50px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    text-align: left;
-}
-
-.contact-content {
-    display: flex;
-    align-items: center;
-    max-width: 900px;
-    width: 100%;
-    gap: 40px;
-}
-
-.contact-image {
-    flex: 1;
-}
-
-.contact-image img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-
-#contact h2 {
-    color: #053b1c;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    width: 100%;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-textarea {
-    height: 100px;
-}
-
-button {
-    background-color: #198754;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #145a32;
-}
-
-.social-links {
-    margin-top: 20px;
-    text-align: center;
-}
-
 .full-width-image {
     width: 100vw; /* Prend toute la largeur de l'écran */
     overflow: hidden;
@@ -552,7 +426,7 @@ button:hover {
 /*FOOTER*/
 
 .footer {
-    background-color: #053b1c;
+    background-color: #7a3600;
     color: white;
     text-align: center;
     padding: 20px 0;
