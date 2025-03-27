@@ -305,7 +305,7 @@ h2 {
 
 .skill span {
     font-size: 18px;
-    color: #053b1c;
+    color: var(--light);
     font-weight: bold;
 }
 
@@ -426,11 +426,10 @@ h2 {
 /*FOOTER*/
 
 .footer {
-    background-color: #7a3600;
-    color: white;
+    color: var(--emerald);
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .footer p {
