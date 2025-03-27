@@ -32,3 +32,38 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// SELECTION NAV DYAMIQUE //
+
+document.addEventListener("DOMContentLoaded", function() {
+    const filters = document.querySelectorAll(".projet-nav a");
+    const sections = document.querySelectorAll(".grid");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute("data-filter");
+
+            if (targetId === "all") {
+                // Afficher tous les projets
+                sections.forEach(section => {
+                    section.classList.add("active");
+                });
+            } else {
+                // Masquer tous les projets
+                sections.forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                // Afficher uniquement la catégorie sélectionnée
+                document.getElementById(targetId).classList.add("active");
+            }
+        });
+    });
+
+    // Activer par défaut "Tous les projets"
+    sections.forEach(section => section.classList.add("active"));
+});
+

@@ -23,14 +23,30 @@
         <h1>Bienvenue sur mon Portfolio</h1>
         <p>Développeuse Web | Passionnée de design et d’interactivité</p>
         <a href="#projets" class="btn">Voir mes projets</a>
+        <!-- Ajout des liens vers les réseaux sociaux -->
+        <div class="social-links">
+            <a href="https://github.com/ton-compte" target="_blank" class="social-icon">
+                <img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/ton-compte" target="_blank" class="social-icon">
+                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.behance.net/ton-compte" target="_blank" class="social-icon">
+                <img src="https://img.icons8.com/ios/50/000000/behance.png" alt="Behance">
+            </a>
+        </div>
     </header>
     
+
+
     <section id="projets">
         <h2>Mes Projets</h2>
         <div class="projet-nav">
             <ul>
-                <li><a href="#dev-projets">Projets Développement</a></li>
-                <li><a href="#com-projets">Projets Communication</a></li>
+                <li><a href="#" data-filter="all">Tous les projets</a></li>
+                <li><a href="#" data-filter="dev-projets">Projets Développement</a></li>
+                <li><a href="#" data-filter="com-projets">Projets Communication</a></li>
+                <li><a href="#" data-filter="crea-projets">Projets Création</a></li>
             </ul>
         </div>
         <div id="dev-projets" class="grid">
@@ -43,25 +59,88 @@
             <div class="card">Projet Communication 2</div>
             <div class="card">Projet Communication 3</div>
         </div>
+        <div id="crea-projets" class="grid">
+            <div class="card">Projet Création 1</div>
+            <div class="card">Projet Création 2</div>
+            <div class="card">Projet Création 3</div>
+        </div>
     </section>
+    
+    
     
     <section id="competences">
         <h2>Mes Compétences</h2>
         <div class="competences-container">
-            <div class="competence">
-                <h3>Développement Web</h3>
-                <p>HTML, CSS, JavaScript, PHP, React, Node.js</p>
+            <!-- Compétences en Développement -->
+            <div class="competence-column">
+                <h3>Développement</h3>
+                <div class="skills-list">
+                    <div class="skill">
+                        <img src="images/php.svg" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/nodejs.svg" alt="Node JS">
+                        <span>Node JS</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/python.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/csharp.svg" alt="C#">
+                        <span>C#</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/expressjs.svg" alt="Express.js">
+                        <span>Express.js</span>
+                    </div>
+                </div>
             </div>
-            <div class="competence">
-                <h3>Design</h3>
-                <p>UI/UX, Adobe XD, Figma</p>
+    
+            <!-- Compétences en Création (ajoute les icônes correspondantes) -->
+            <div class="competence-column">
+                <h3>Création</h3>
+                <div class="skills-list">
+                    <!-- Ajoute tes compétences en création ici -->
+                    <div class="skill">
+                        <img src="images/inkscape.svg" alt="Inkscape">
+                        <span>Inkscape</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/figma.svg" alt="Figma">
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/adobe-xd.svg" alt="Adobe XD">
+                        <span>Adobe XD</span>
+                    </div>
+                </div>
             </div>
-            <div class="competence">
+    
+            <!-- Compétences en Communication (ajoute les icônes correspondantes) -->
+            <div class="competence-column">
                 <h3>Communication</h3>
-                <p>Gestion de projet, SEO, Marketing digital</p>
+                <div class="skills-list">
+                    <!-- Ajoute tes compétences en communication ici -->
+                    <div class="skill">
+                        <img src="images/writing.svg" alt="Rédaction">
+                        <span>Rédaction</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/public-speaking.svg" alt="Prise de parole">
+                        <span>Prise de parole</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/teamwork.svg" alt="Travail en équipe">
+                        <span>Travail en équipe</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+    
 
 
     <section id="a-propos">
@@ -110,5 +189,21 @@
             <a href="https://twitter.com/votreprofil" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Wassila Hamed - Tous droits réservés</p>
+        <div class="social-links">
+            <a href="https://github.com/votreprofil" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/votreprofil" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.behance.net/votreprofil" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+    </footer>
+    
 </body>
 </html>
