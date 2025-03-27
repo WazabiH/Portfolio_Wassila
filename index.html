@@ -1,297 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./media/photo_profil.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Portfolio-Wassila Hamed</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website - HTML, CSS & Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">PORTFOLIO</div>
-      <div>
-        <ul class="nav-links ">
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#experience">Compétences</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <div class="scrollToTop-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
+    <header>
+      <a href="#" class="brand">Jacob</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="#main">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Wassila Hamed</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    </header>
+
+    <section class="main" id="main">
+      <div class="content">
+        <h2>Hello, I'm<br><span>Jacob Stevens</span></h2>
+        <div class="animated-text">
+          <h3>Web Designer</h3>
+          <h3>Web Developer</h3>
+          <h3>Motion Graphic Designer</h3>
         </div>
-        <div class="menu-links">
-          <ul>
-            <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./media/photo_profil.png" alt="Photo de Wassila Hamed">
-      </div>
-      
-      <div class="section__text">
-        <p class="section__text__p1">Je suis</p>
-        <h1 class="title">Wassila Hamed</h1>
-        <p class="section__text__p2">Développeuse Full Stack</p>
-        
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./media/CV_Hamed_Wassila.pdf')"
-          >
-            Mon CV
-          </button>
-        </div>
-        
-        <div id="socials-container">
-          <img
-            src="./media/linkedin.png"
-            alt="Profil LinkedIn de Wassila Hamed"
-            class="icon"
-            onclick="window.open('https://linkedin.com/', '_blank')"
-          />
-          <img
-            src="./media/github.png"
-            alt="Profil GitHub de Wassila Hamed"
-            class="icon"
-            onclick="window.open('https://github.com/', '_blank')"
-          />
+        <a href="#" class="btn">See My Work</a>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </section>
 
-<!--===== A PROPOS =====--> 
-    <section id="about">
-      <p class="section__text__p1">En savoir plus</p>
-      <h1 class="title">A propos de moi</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./media/chat.jpg" alt="chat photo" class="about-pic" />
+    <section class="about" id="about">
+      <div class="title reveal">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="content">
+        <div class="column col-left reveal">
+          <div class="img-card">
+            <img src="images/img1.jpg" alt="">
+          </div>
         </div>
-        <div class="text-container">
-          <h3>JE SUIS WASSILA</h3>
-          <p>
-            Dans ma vie, j'ai toujours eu une grande curiosité et j'aime découvrir
-            de nouvelles choses. Que ce soit le dessin, la peinture, le montage, la
-            photographie ou même le développement et la programmation, je trouve
-            quelque chose d'intéressant dans chacun de ces domaines. Même si je suis
-            débutant dans certains de ces domaines, je travaille dur pour compléter
-            mes compétences grâce à ma formation actuelle en première année de BUT
-            MMI (Bachelor des Métiers du Multimédia et de l'Internet). Mon objectif
-            est de continuer mes études dans le parcours développement, où j'espère
-            pouvoir réaliser mon projet ultime. En attendant, vous pouvez découvrir
-            ce que je fais actuellement !
-          </p>
+        <div class="column col-right reveal">
+          <h2 class="content-title">Hey There! I'm Jacob Stevens</h2>
+          <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#" class="btn">See More</a>
         </div>
       </div>
     </section>
 
-<!--===== COMPETENCES =====-->  
+    <section class="skills" id="skills">
+      <div class="title reveal">
+        <h2 class="section-title">My Skills</h2>
+      </div>
+      <div class="content">
+        <div class="column col-left reveal">
+          <h2 class="content-title">My Skills and Experiences</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#" class="btn">See More</a>
+        </div>
+        <div class="column col-right reveal">
+          <div class="bar">
+            <div class="info">
+              <span>HTML</span>
+              <span>95%</span>
+            </div>
+            <div class="line html"></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="line css"></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>Javascript</span>
+              <span>80%</span>
+            </div>
+            <div class="line javascript"></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>JQuery</span>
+              <span>80%</span>
+            </div>
+            <div class="line jquery"></div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>PHP</span>
+              <span>75%</span>
+            </div>
+            <div class="line php"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="experience">
-      <p class="section__text__p1">Explorez mes compétences</p>
-      <h1 class="title">Compétences</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- Frontend Development Column -->
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Expérimenté</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Expérimenté</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Débutant</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>Illustrator</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>Indisgn</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>Photoshop</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
+    <section class="services" id="services">
+      <div class="title reveal">
+        <h2 class="section-title">My Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="content">
+        <div class="card reveal">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="info">
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="service-icon">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <div class="info">
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="service-icon">
+            <i class="fas fa-object-group"></i>
+          </div>
+          <div class="info">
+            <h3>Motion Graphic Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="title reveal">
+        <h2 class="section-title">My Work</h2>
+      </div>
+      <div class="content">
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work1.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work2.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work3.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work4.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work5.jpg" alt="">
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img">
+            <img src="images/work6.jpg" alt="">
+          </div>
+        </div>
+        <div class="title reveal">
+          <a href="#" class="btn">See All</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="title reveal">
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info">
+              <h3>Address</h3>
+              <span>Address, City, Country</span>
             </div>
           </div>
-    
-          <!-- Backend Development Column -->
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img src="./media/valider.jpg" alt="Compétences icon" class="icon" />
-                <div>
-                  <h3>WordPress</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+              <h3>Phone</h3>
+              <span>+00 0000 000 000</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+              <h3>Email Address</h3>
+              <span>contact@email.com</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="info">
+              <h3>Website</h3>
+              <span>mywebsite.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contact-form reveal">
+            <h3>Send Message</h3>
+            <div class="input-box">
+              <input type="text" name="" value="" placeholder="Name">
+            </div>
+            <div class="input-box">
+              <input type="text" name="" value="" placeholder="Email">
+            </div>
+            <div class="input-box">
+              ,
+            </div>
+            <div class="input-box">
+              <input type="submit" class="send-btn" name="" value="Send"/>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-<!--===== PROJETS =====-->
-<section class="work section " id="projects">
-  <p class="section__text__p1">Mes projets réçent</p>
-  <h1 class="title">Projets</h1>
-
-  <div class="work__container bd-grid">
-      <a href="lien-vers-ton-projet-1.html" class="work__img">
-          <img src="media/wordpress.png" alt="wordpress site">
-          <div class="work__description ">
-              <p class="text_color" >Création d'un site sur wordpress</p>
-          </div>
-      </a>
-      <a href="https://hamed.alwaysdata.net/BUT1MM1/dev/SAE105/Cours/Contact.php" class="work__img">
-          <img src="media/projet-2.png" alt="">
-          <div class="work__description">
-              <p class="text_color">Création d'un formulaire de contact</p>
-          </div>
-      </a>
-      <a href="lhttps://wizan.alwaysdata.net/SAE-203-consignes/code/" class="work__img">
-          <img src="media/donner.png" alt="">
-          <div class="work__description">
-              <p class="text_color">Création d'une base de donnée</p>
-          </div>
-      </a>
-      <a href="https://wazabih.github.io/SAE_303-Data/" class="work__img">
-          <img src="media/projet-3.png" alt="">
-          <div class="work__description">
-              <p class="text_color">Site web conernant une data donnée</p>
-          </div>
-      </a>
-      <a href="https://drive.google.com/file/d/125xGp_pKnHqG3HBIhGQEJc9QvT_V1ljs/view?usp=sharing" class="work__img">
-        <img src="media/livret-exposition.png" alt="Livret d'exposition">
-        <div class="work__description">
-            <p class="text_color">Livret d'exposition</p>
-        </div>
-    </a>
-    <a href="lien-vers-ton-projet-3.html" class="work__img">
-      <img src="media/associations.jpg" alt="">
-      <div class="work__description">
-          <p class="text_color">Un projet web pour promouvoir des événements associatifs.</p>
-      </div>
-    </a>
-
-    <a href="lien-vers-ton-projet-3.html" class="work__img">
-      <img src="media/associations.jpg" alt="">
-      <div class="work__description">
-          <p class="text_color">Un projet web pour promouvoir des événements associatifs.</p>
-      </div>
-    </a>
-    <a href="lien-vers-ton-projet-3.html" class="work__img">
-      <img src="media/dc9bf01562356541f08300326475a4d9.jpg" alt="">
-      <div class="work__description">
-          <p class="text_color">Conception d'un jeu vidéo (vaisseau).</p>
-      </div>
-    </a>
-    
-    <a href="https://drive.google.com/file/d/1ClKNtYzIVfGrMtY08xngdBG_aYXw9dkX/view?usp=sharing" class="work__img">
-      <img src="media/chartegraphique.png" alt="Portfolio">
-      <div class="work__description">
-          <p class="text_color">Charte Graphique de Mon Portfolio</p>
-      </div>
-    </a>
-      <!-- Ajoute ici les autres projets -->
-  </div>
-</section>
-
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-      <p class="section__text__p1">Contactez-moi</p>
-      <h1 class="title">Contact</h1>
-
-      <div class="contact__container bd-grid">
-          <form action="sendmail.php" method="POST" class="contact__form">
-              <input type="text" name="name" placeholder="Name" class="contact__input" required>
-              <input type="email" name="email" placeholder="Email" class="contact__input" required>
-              <textarea name="message" cols="0" rows="10" class="contact__input" required></textarea>
-              <input type="submit" value="Envoyez" class="contact__button button">
-          </form>
-      </div>
-    </section>
-  
-  <!--===== FOOTER =====-->
-  <footer>
-      <nav>
-        <div class="nav-links-container">
-          <div class="nav-links">
-            <li><a href="#about">A propos</a></li>
-            <li><a href="#experience">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Wassila Hamed. All rights reserved</p>
+    <footer class="footer">
+      <span class="footer-title">Jacob Stevens</span>
+      <p>Copyright @2021 <a href="#">Coding Snow</a>. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+
   </body>
 </html>
+      
