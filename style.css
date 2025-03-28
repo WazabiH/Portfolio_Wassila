@@ -23,41 +23,76 @@ h1 {
 }
 
 
-
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    padding: 15px 20px; /* Ajoute du padding horizontal */
+    background: var(--emerald); /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Flou léger pour l'effet moderne */
+    padding: 15px 30px; /* Plus de respiration */
     text-align: center;
+    transition: background 0.3s ease; /* Animation fluide */
+    z-index: 1000;
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
-    margin: 0 auto; /* Centre la nav */
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-end; /* Aligné à droite */
-    gap: 20px;
-    max-width: 1200px; /* Pour éviter que tout soit collé sur les bords */
-}
-
-a {
-    font-size: 20px; /* Taille en pixels */
+    justify-content: flex-end;
+    gap: 25px; /* Plus d'espace entre les liens */
+    max-width: 1200px;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
-    
+    font-size: 18px;
     font-weight: 500;
-    transition: 0.3s;
-    padding: 10px 15px; /* Espacement entre les liens */
+    padding: 12px 18px; /* Espacement plus équilibré */
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+/* Effet de soulignement au survol */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background: var(--light);
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 .navbar a:hover {
     color: var(--dark);
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Effet sticky au scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 30px;
+}
+
+/* Responsive : pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar ul {
+        justify-content: center; /* Centrer pour mobile */
+    }
+    .navbar a {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
 }
 
 
@@ -106,7 +141,7 @@ header .social-links {
 }
 
 section {
-    padding: 80px 20px;
+    padding: 80px 20px 10px;
     text-align: center;
 }
 
@@ -254,73 +289,79 @@ button {
 
 
 
+
 /* COMPETENCES */
 #competences {
     text-align: center;
-    padding: 50px 0;
+    padding: 1px 0;
     background-color: var(--light);
+    padding-top: 20px; /* Réduit l'espace en haut */
+    margin-bottom: -10px; /* Remonte la vague si besoin */
 }
 
 
 #competences h2 {
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: 28px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     color: var(--emerald);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     position: relative;
 }
 
 .competences-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .competence-column {
     flex: 1;
     text-align: center;
+    max-width: 350px;
 }
 
 .competence-column h3 {
     color: var(--emerald);
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .skills-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .skill {
     display: flex;
     align-items: center;
-    background: var(--dark);
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 12px 18px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 280px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .skill:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .skill img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
 }
 
 .skill span {
-    font-size: 18px;
-    color: var(--light);
-    font-weight: bold;
+    font-size: 17px;
+    color: var(--dark);
+    font-weight: 550;
 }
 
 
