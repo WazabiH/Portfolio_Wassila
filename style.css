@@ -19,6 +19,7 @@ body {
 h1 {
     font-weight: 500;
     font-size: 24px;
+    color:var(--light) ;
 }
 
 
@@ -113,6 +114,15 @@ section {
 
 #projets {
     background-color:var(--emerald);
+}
+
+#projets h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: var(--light);
+    letter-spacing: 2px;
+    position: relative;
 }
 .projet-nav {
     margin-bottom: 30px;
@@ -251,10 +261,14 @@ button {
     background-color: var(--light);
 }
 
-h2 {
-    color: var(--emerald);
+
+#competences h2 {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: var(--emerald);
+    letter-spacing: 2px;
+    position: relative;
 }
 
 .competences-container {
@@ -315,7 +329,7 @@ h2 {
 /* Section principale */
 #a-propos {
     background-color: var(--emerald); /* Fond vert foncé */
-    color: white;
+    color: var(--emerald);
     text-align: center;
     padding: 60px 20px;
 }
@@ -325,7 +339,7 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
     text-transform: uppercase;
-    color: white;
+    color: var(--light);
     letter-spacing: 2px;
     position: relative;
 }
@@ -335,7 +349,7 @@ h2 {
     display: block;
     width: 80px;
     height: 4px;
-    background: white;
+    background: var(--light);
     margin: 10px auto 0;
 }
 
@@ -351,7 +365,7 @@ h2 {
     content: "";
     position: absolute;
     width: 3px;
-    background-color: white; /* Ligne blanche plus épaisse */
+    background-color:var(--light); /* Ligne blanche plus épaisse */
     top: 0;
     bottom: 0;
     left: 50%;
@@ -363,7 +377,7 @@ h2 {
     position: relative;
     width: 42%;
     padding: 20px;
-    background: white;
+    background: var(--light);
     border-radius: 12px;
     margin: 30px 0;
     text-align: left;
