@@ -95,6 +95,17 @@ h1 {
     }
 }
 
+.text-container {
+    background-color: var(--light); /* Couleur beige */
+    padding: 30px 100px 30px 30px; /* Haut | Droite | Bas | Gauche */
+    max-width: 800px;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 900;
+    color: var(--emerald); /* Texte vert foncé */
+    line-height: 1;
+    border-radius: 5px;
+}
 
 header {
     height: 100vh;
@@ -362,6 +373,30 @@ button {
     font-size: 17px;
     color: var(--dark);
     font-weight: 550;
+}
+
+
+/*BANNER*/ 
+
+.stage-banner {
+    background-color: black; /* Fond noir */
+    color: var(--emerald); /* Texte vert foncé */
+    text-align: center;
+    padding: 20px;
+}
+
+.stage-banner h1 {
+    font-size: 149px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--emerald);
+}
+
+.stage-banner p {
+    font-size: 50px;
+    color: var(--light); /* Couleur beige pour le texte en dessous */
+    margin: 5px 0 0;
+    font-weight: bold;
 }
 
 
