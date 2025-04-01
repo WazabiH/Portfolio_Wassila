@@ -25,12 +25,12 @@ h1 {
 /* ----------------------------BARRE DE NAVIGATION ------------------------*/ 
 .navbar {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     background: var(--emerald);
     backdrop-filter: blur(10px);
-    padding: 15px 30px;
+    padding: 15px 50px 0px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,15 +43,17 @@ h1 {
     font-size: 22px;
     font-weight: bold;
     color: var(--light);
+    white-space: nowrap; /* Empêche la coupure du texte */
 }
 
-/* Liens de navigation */
 .nav-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     gap: 25px;
+    margin-left: auto;
+    padding: 0;
+    margin-right: 40px; /* Ajoute un espace entre la nav et le bord droit */
+    max-width: 80%; /* Limite la largeur pour éviter qu'elle touche les bords */
 }
 
 .nav-links a {
@@ -531,10 +533,9 @@ button {
 }
 
 
-
-
 .full-width-image {
-    width: 100vw; /* Prend toute la largeur de l'écran */
+    max-width: 80vw; /* Limite la largeur à 80% de l'écran */
+    margin: 0 auto; /* Centre l'élément */
     overflow: hidden;
 }
 
