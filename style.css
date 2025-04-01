@@ -294,18 +294,20 @@ section {
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
-
 /* LIEN "EN SAVOIR PLUS" */
 .card .more-link {
     font-weight: bold;
     color: var(--emerald);
     margin-top: 10px;
     transition: color 0.3s;
+    text-decoration: none; /* Supprime le soulignement */
 }
 
 .card .more-link:hover {
     color: var(--dark);
+    text-decoration: none; /* Assure qu'il n'y a pas de soulignement au survol */
 }
+
 
 /* RESPONSIVITÉ */
 @media (max-width: 768px) {
