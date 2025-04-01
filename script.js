@@ -96,6 +96,23 @@ prevBtn.addEventListener('click', () => {
     });
 
 
+/*---------------------------BARRE DE NAVIGATION---------------------------*/ 
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Effet sticky au scroll
+window.addEventListener("scroll", () => {
+    document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+
+
 
 
 
