@@ -192,74 +192,81 @@ section {
 }
 
 /* PROJETS */
-
 #projets {
-    background-color:var(--emerald);
+    background-color: var(--emerald);
+    padding: 60px 20px;
+    text-align: center;
 }
 
 #projets h2 {
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: 32px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     color: var(--light);
     letter-spacing: 2px;
     position: relative;
 }
+
+/* NAVIGATION DES PROJETS */
 .projet-nav {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .projet-nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     font-weight: bold;
+    flex-wrap: wrap;
 }
 
 .projet-nav a {
     text-decoration: none;
     color: var(--light);
     transition: 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
 }
 
-.projet-nav a:hover {
+.projet-nav a:hover, .projet-nav a.active {
+    background-color: var(--light);
     color: var(--dark);
 }
 
+/* GRILLE DES PROJETS */
+
+/* Cacher toutes les sections par défaut */
 .grid {
     display: none;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
+/* Afficher la section active */
 .grid.active {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 /* CARTES PROJETS */
 .card {
-    min-width: 280px;
-    max-width: 320px;
-    background: white;
-    color: black;
+    width: 320px;
+    background: var(--light);
+    color: var(--emerald);
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet de mise en avant du projet au centre */
-.card.center {
-    transform: scale(1.1);
+.card:hover {
+    transform: scale(1.05);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -271,28 +278,17 @@ section {
 
 /* TITRE DU PROJET */
 .card h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 10px 0 5px 0;
-}
-
-/* LIENS */
-.card a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--emerald);
-}
-
-.card a:hover {
-    color: var(--dark);
+    margin: 10px 0;
 }
 
 /* DESCRIPTION */
 .card-description {
     font-size: 14px;
-    font-weight: normal;
-    line-height: 1.4;
-    max-height: 3em;
+    line-height: 1.5;
+    color: #555;
+    max-height: 4em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -303,65 +299,66 @@ section {
 .card .more-link {
     font-weight: bold;
     color: var(--emerald);
-    display: block;
     margin-top: 10px;
+    transition: color 0.3s;
 }
 
 .card .more-link:hover {
     color: var(--dark);
 }
 
-/* BOUTONS DE NAVIGATION */
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+/* RESPONSIVITÉ */
+@media (max-width: 768px) {
+    .grid {
+        gap: 20px;
+    }
+    .card {
+        width: 90%;
+    }
 }
 
-#prev {
-    left: 10px;
+@media (max-width: 480px) {
+    #projets h2 {
+        font-size: 26px;
+    }
+    .projet-nav ul {
+        gap: 10px;
+    }
+    .projet-nav a {
+        padding: 6px 12px;
+    }
 }
-
-#next {
-    right: 10px;
-}
-
-
 
 
 /* COMPETENCES */
 #competences {
     text-align: center;
-    padding: 1px 0;
-    background-color: var(--light);
-    padding-top: 20px; /* Réduit l'espace en haut */
-    margin-bottom: -10px; /* Remonte la vague si besoin */
+    padding: 50px; /* Supprime tout padding */
+    margin: 0; /* Supprime toute marge */
+    border-radius: 10px;
 }
 
-
+/* Titre */
 #competences h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 50px;
     text-transform: uppercase;
-    color: var(--emerald);
-    letter-spacing: 1.5px;
+    color: var(--dark);
+    letter-spacing: 2px;
     position: relative;
+    font-weight: 700;
 }
 
+/* Conteneur */
 .competences-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
+/* Colonnes */
 .competence-column {
     flex: 1;
     text-align: center;
@@ -369,46 +366,83 @@ button {
 }
 
 .competence-column h3 {
-    color: var(--emerald);
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: 600;
+    color: var(--dark);
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
+/* Liste des compétences */
 .skills-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
+/* Compétence individuelle */
 .skill {
+    position: relative;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 12px 18px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 15px;
     width: 100%;
-    max-width: 280px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
 }
 
+/* Barre de progression animée */
+.skill::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--dark);
+    transition: width 0.6s ease-in-out;
+}
+
+/* Effet de hover */
 .skill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.3);
 }
 
+/* Barre qui se remplit au survol */
+.skill:hover::after {
+    width: 100%;
+}
+
+/* Icône de compétence */
 .skill img {
-    width: 28px;
-    height: 28px;
-    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.skill span {
-    font-size: 17px;
-    color: var(--dark);
-    font-weight: 550;
+/* Effet sur l'icône au hover */
+.skill:hover img {
+    transform: rotate(10deg) scale(1.1);
 }
+
+/* Texte de la compétence */
+.skill span {
+    font-size: 18px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
 
 
 /*BANNER*/ 

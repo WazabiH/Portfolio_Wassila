@@ -97,22 +97,46 @@ prevBtn.addEventListener('click', () => {
 
 
 /*---------------------------BARRE DE NAVIGATION---------------------------*/ 
+document.querySelectorAll('.projet-nav a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault(); // Empêche le rechargement de la page
+        let filter = item.getAttribute('data-filter'); // Récupère le filtre à partir de l'attribut data-filter
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+        // Réinitialise l'état actif sur tous les projets
+        document.querySelectorAll('.grid').forEach(grid => {
+            if (filter === 'all' || grid.id === filter) {
+                grid.classList.add('active'); // Ajoute 'active' à la section qui correspond au filtre
+            } else {
+                grid.classList.remove('active'); // Retire 'active' des autres sections
+            }
+        });
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+        // Met à jour l'état actif dans la navigation
+        document.querySelectorAll('.projet-nav a').forEach(link => {
+            link.classList.remove('active');
+        });
+        item.classList.add('active');
+    });
 });
 
-// Effet sticky au scroll
-window.addEventListener("scroll", () => {
-    document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".grid, #projets h2");
+
+    function revealOnScroll() {
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
 });
-
-
-
-
 
 
 
