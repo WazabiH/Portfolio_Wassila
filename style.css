@@ -231,7 +231,7 @@ section {
 
 .projet-nav a:hover, .projet-nav a.active {
     background-color: var(--light);
-    color: var(--dark);
+    color: var(--emerald);
 }
 
 /* GRILLE DES PROJETS */
@@ -483,22 +483,20 @@ section {
 
 /* Titre */
 #a-propos h2 {
-    font-size: 2.5rem;
+    font-size: 32px;
     margin-bottom: 50px;
     text-transform: uppercase;
     color: var(--light);
     letter-spacing: 2px;
     position: relative;
+    font-weight: 700;
 }
 
+/* Enlever le trait sous le titre */
 #a-propos h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--light);
-    margin: 10px auto 0;
+    content: none; /* Supprime le trait sous le titre */
 }
+
 
 /* Timeline */
 .timeline {
